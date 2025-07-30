@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria Sonho de mel - Cardápio Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #FF85B3;
+            --secondary: #FFD166;
+            --accent: #06D6A0;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #dea9ce;
+            color: #5E3A41;
+        }
+        
+        .logo-font {
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .menu-category {
+            transition: all 0.3s ease;
+        }
+        
+        .menu-category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .menu-item:hover .item-image {
+            transform: scale(1.05);
+        }
+        
+        .item-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .price-tag {
+            background: linear-gradient(135deg, var(--primary), #FF6384);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 sm:px-6 py-4 sm:py-8 max-w-6xl">
+        <!-- Cabeçalho -->
+        <header class="text-center mb-12">
+            <h1 class="logo-font text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-pink-600 mb-4">Doceria Sonho de mel</h1>
+            <p class="text-lg sm:text-xl text-gray-600">Adoçando sua vida com carinho desde 2025</p>
+            
+            <div class="mt-8">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d09d1b3a-13b5-46cf-86a5-f341af2806ce.png" alt="Confeitaria vintage com balcão de madeira repleto de doces coloridos, bolos decorados e cupcakes em exposição" class="rounded-lg shadow-lg mx-auto w-full object-cover h-64 md:h-96">
+            </div>
+        </header>
+        
+        <!-- Navegação por categorias -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
+            <button class="category-btn px-4 sm:px-6 py-1 sm:py-2 text-sm sm:text-base rounded-full bg-pink-100 text-pink-600 font-medium hover:bg-pink-200 transition" data-category="bolos">Bolos</button>
+            <button class="category-btn px-6 py-2 rounded-full bg-yellow-100 text-yellow-600 font-medium hover:bg-yellow-200 transition" data-category="doces">Doces Finos</button>
+            <button class="category-btn px-6 py-2 rounded-full bg-green-100 text-green-600 font-medium hover:bg-green-200 transition" data-category="tortas">Tortas</button>
+            <button class="category-btn px-6 py-2 rounded-full bg-purple-100 text-purple-600 font-medium hover:bg-purple-200 transition" data-category="cupcakes">Cupcakes</button>
+            <button class="category-btn px-6 py-2 rounded-full bg-blue-100 text-blue-600 font-medium hover:bg-blue-200 transition" data-category="salados">Salgados</button>
+        </div>
+        
+        <!-- Seção Principal -->
+        <main>
+            <!-- Bolos -->
+            <section id="bolos" class="menu-section mb-16">
+                <h2 class="text-3xl font-bold mb-6 text-pink-600 border-b-2 border-pink-200 pb-2">Bolos Artesanais</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                    <!-- Item 1 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-40 sm:h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f2d05d0-d2e5-4a85-8221-f129cb4ca19d.png" alt="Bolo de chocolate triplo com cobertura espelhada e decorado com frutas vermelhas frescas" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 89,90</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Bolo Chocolate Supreme</h3>
+                            <p class="text-gray-600 mb-4">Três camadas de massa de chocolate belga com recheio de ganache e frutas vermelhas</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-pink-100 text-pink-600 rounded-lg hover:bg-pink-200 transition font-medium" data-item="Bolo Chocolate Supreme" data-price="89.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0716335b-41b2-4859-bb0c-df6fba420184.png" alt="Bolo de red velvet branco e vermelho com detalhes em cream cheese frosting e flores comestíveis" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 79,90</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Red Velvet Clássico</h3>
+                            <p class="text-gray-600 mb-4">Massa aveludada com cream cheese frosting e flores comestíveis</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-pink-100 text-pink-600 rounded-lg hover:bg-pink-200 transition font-medium" data-item="Red Velvet Clássico" data-price="79.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f51219f-456f-4347-8c5a-e6efdc071265.png" alt="Bolo de cenoura com cobertura de chocolate derretido e nozes caramelizadas por cima em estilo rústico" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 65,90</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Bolo de Cenoura Premium</h3>
+                            <p class="text-gray-600 mb-4">Massa fofinha com chocolate belga e nozes caramelizadas</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-pink-100 text-pink-600 rounded-lg hover:bg-pink-200 transition font-medium" data-item="Bolo de Cenoura Premium" data-price="65.90">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Doces Finos -->
+            <section id="doces" class="menu-section mb-16 hidden">
+                <h2 class="text-3xl font-bold mb-6 text-yellow-600 border-b-2 border-yellow-200 pb-2">Doces Finos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c029c754-aef7-4d0e-847b-be12cce01878.png" alt="Brigadeiros gourmet variados em copinhos decorados com granulado dourado e flores comestíveis" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 3,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Brigadeiros Gourmet</h3>
+                            <p class="text-gray-600 mb-4">Variedades: Tradicional, Branco, Café, Ninho com Nutella</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-yellow-100 text-yellow-600 rounded-lg hover:bg-yellow-200 transition font-medium" data-item="Brigadeiros Gourmet" data-price="3.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e4ff9af0-0c94-4043-ad8d-034299a5565d.png" alt="Macarons coloridos em sabores variados arranjados em forma de arco-íris em bandeja de madeira" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 7,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Macarons Franceses</h3>
+                            <p class="text-gray-600 mb-4">12 sabores disponíveis, incluindo framboesa, pistache e baunilha bourbon</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-yellow-100 text-yellow-600 rounded-lg hover:bg-yellow-200 transition font-medium" data-item="Macarons Franceses" data-price="7.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74f51196-dea6-4e5c-8c1d-8ee58c8801b4.png" alt="Trufas de chocolate meio amargo envoltas em pó de cacau e decoradas com folhas de ouro comestível" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 5,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Trufas de Chocolate</h3>
+                            <p class="text-gray-600 mb-4">Chocolate belga 70% cacau com recheios cremosos e folha de ouro</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-yellow-100 text-yellow-600 rounded-lg hover:bg-yellow-200 transition font-medium" data-item="Trufas de Chocolate" data-price="5.90">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Tortas -->
+            <section id="tortas" class="menu-section mb-16 hidden">
+                <h2 class="text-3xl font-bold mb-6 text-green-600 border-b-2 border-green-200 pb-2">Tortas Especiais</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/690a19e6-626e-4e1d-9ef3-6b12522935e0.png" alt="Torta de limão merengue com picos torrados e raspas de limão fresco sobre crosta amanteigada" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 59,90</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Torta de Limão Siciliano</h3>
+                            <p class="text-gray-600 mb-4">Crocante base de biscoito com recheio cremoso e merengue italiano</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition font-medium" data-item="Torta de Limão Siciliano" data-price="59.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8789c79b-07f2-4725-a7ca-a0b439d61af9.png" alt="Torta de maçã estilo americana com trama de massa folhada e canela polvilhada por cima" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 49,90</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Torta de Maçã Canela</h3>
+                            <p class="text-gray-600 mb-4">Maçãs caramelizadas com canela e crosta de massa folhada</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition font-medium" data-item="Torta de Maçã Canela" data-price="49.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5c051dc-10aa-4498-ba2e-1826691ba0d1.png" alt="Fatia de torta de chocolate com morangos frescos e calda de framboesa escorrendo pelo lado" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 54,90</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Torta Chocolate e Morango</h3>
+                            <p class="text-gray-600 mb-4">Mousse de chocolate com geleia de morango caseira</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition font-medium" data-item="Torta Chocolate e Morango" data-price="54.90">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Cupcakes -->
+            <section id="cupcakes" class="menu-section mb-16 hidden">
+                <h2 class="text-3xl font-bold mb-6 text-purple-600 border-b-2 border-purple-200 pb-2">Cupcakes Decorados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/49d2958d-7a80-428e-a2a6-69c57ac3828e.png" alt="Cupcakes de baunilha com frosting rosa claro decorados com pequenas flores comestíveis e pérolas de açúcar" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 9,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Cupcake Floral</h3>
+                            <p class="text-gray-600 mb-4">Baunilha com buttercream e decoração floral comestível</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition font-medium" data-item="Cupcake Floral" data-price="9.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d19b9018-fb39-438c-b13e-cc5a06c62ef6.png" alt="Cupcakes de chocolate com frosting chocolate escuro decorados com raspas de chocolate e morangos pequenos" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 10,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Cupcake Chocolate Supreme</h3>
+                            <p class="text-gray-600 mb-4">Massa de chocolate belga com ganache e morangos frescos</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition font-medium" data-item="Cupcake Chocolate Supreme" data-price="10.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/01899db8-4a56-4184-acf8-b1a61383f220.png" alt="Cupcakes de red velvet com cream cheese frosting em formato de coração e raspas de chocolate branco" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 11,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Cupcake Red Velvet</h3>
+                            <p class="text-gray-600 mb-4">Com cream cheese frosting e detalhes em chocolate</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition font-medium" data-item="Cupcake Red Velvet" data-price="11.90">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Salgados -->
+            <section id="salados" class="menu-section mb-16 hidden">
+                <h2 class="text-3xl font-bold mb-6 text-blue-600 border-b-2 border-blue-200 pb-2">Salgados Finos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d51c97dd-4527-4634-904f-e49aae3e4084.png" alt="Empadinhas douradas em forma de flor com recheio de frango e catupiry sobre tábua de madeira" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 6,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Empadinha de Frango</h3>
+                            <p class="text-gray-600 mb-4">Massa folhada com recheio de frango desfiado e catupiry</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition font-medium" data-item="Empadinha de Frango" data-price="6.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3b22338a-b0eb-4ea0-9fec-6000ef96cf91.png" alt="Coxinhas crocantes em formato tradicional com farofa crocante por cima e molho de pimenta ao lado" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 5,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Coxinha Premium</h3>
+                            <p class="text-gray-600 mb-4">Frango desfiado com catupiry e massa crocante</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition font-medium" data-item="Coxinha Premium" data-price="5.90">Adicionar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bb7a7ef5-d4ea-4b21-9a75-9a5d0ef8479f.png" alt="Pãezinhos de queijo dourados e inflados em cesta de palha com raminhos de alecrim decorativo" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 4,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Pão de Queijo Artesanal</h3>
+                            <p class="text-gray-600 mb-4">Feito com queijo minas e polvilho azedo</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition font-medium" data-item="Pão de Queijo Artesanal" data-price="4.90">Adicionar</button>
+                        </div>
+                    </div>
+
+                 <!-- Item 4 -->
+                    <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bcedfc53-70c8-49ba-b56d-8bbdc144a238.png" alt="Bolinhas de queijo douradas com queijo derretendo" class="item-image w-full h-full object-cover">
+                            <div class="price-tag absolute top-4 right-4 px-3 py-1 rounded-full text-white font-bold text-sm shadow-md">R$ 6,90/un</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Bolinha de queijol</h3>
+                            <p class="text-gray-600 mb-4">Feito com queijo mussarela e massa de batata</p>
+                            <button class="add-to-cart-btn w-full py-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition font-medium" data-item="Pão de Queijo Artesanal" data-price="4.90">Adicionar</button>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        
+        <!-- Rodapé -->
+        <footer class="mt-8 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-center px-2 sm:px-0">
+            <div class="mb-6">
+                <h3 class="logo-font text-2xl text-pink-600 mb-4">Doçuras da Vovó</h3>
+                <p class="text-gray-600">Rua dos Sabores, 123 - Centro<br>Segunda a Sábado: 9h às 19h</p>
+            </div>
+            
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" class="text-pink-600 hover:text-pink-800 transition">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3653c40a-3367-4bba-b8fe-35e91b1081a1.png" alt="Ícone do WhatsApp rosa com bordas arredondadas e fundo branco" class="w-10 h-10 rounded-full">
+                </a>
+                <a href="#" class="text-pink-600 hover:text-pink-800 transition">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0a86597a-108e-4e44-ab33-2578bd717f4d.png" alt="Ícone do Instagram rosa com bordas arredondadas e fundo branco" class="w-10 h-10 rounded-full">
+                </a>
+                <a href="#" class="text-pink-600 hover:text-pink-800 transition">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ffc15dab-3f42-4b74-b9bd-6ecbe8a36147.png" alt="Ícone do Facebook rosa com bordas arredondadas e fundo branco" class="w-10 h-10 rounded-full">
+                </a>
+            </div>
+            
+            <p class="text-gray-400 text-sm">© 2023 Doçuras da Vovó. Todos os direitos reservados.</p>
+        </footer>
+        
+        <!-- Carrinho Flutuante -->
+        <div id="cart-btn" class="floating-btn fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-pink-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-xl cursor-pointer hover:bg-pink-700 transition">
+            <span class="text-xl">🛒</span>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-yellow-400 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">0</span>
+        </div>
+        
+        <!-- Modal do Carrinho -->
+        <div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg p-4 sm:p-6 w-full max-w-full sm:max-w-md max-h-[80vh] overflow-y-auto mx-2 sm:mx-0">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-pink-600">Seu Carrinho</h3>
+                    <button id="close-cart" class="text-gray-500 hover:text-gray-700">&times;</button>
+                </div>
+                
+                <div id="cart-items" class="mb-4">
+                    <!-- Itens serão adicionados aqui dinamicamente -->
+                    <p class="text-gray-500 text-center py-4">Seu carrinho está vazio</p>
+                </div>
+                
+                <div class="border-t pt-4">
+                    <div class="flex justify-between mb-2">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal" class="font-bold">R$ 0,00</span>
+                    </div>
+                    
+                    <button id="checkout-btn" class="w-full py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition font-medium">Finalizar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navegação entre categorias
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Esconde todas as seções
+                document.querySelectorAll('.menu-section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                
+                // Mostra a seção selecionada
+                const category = btn.getAttribute('data-category');
+                document.getElementById(category).classList.remove('hidden');
+                
+                // Atualiza botões ativos
+                document.querySelectorAll('.category-btn').forEach(b => {
+                    b.classList.remove('bg-pink-600', 'text-white');
+                    b.classList.add('bg-' + b.getAttribute('data-category') + '-100', 'text-' + b.getAttribute('data-category') + '-600');
+                });
+                
+                btn.classList.remove('bg-' + category + '-100', 'text-' + category + '-600');
+                btn.classList.add('bg-pink-600', 'text-white');
+            });
+        });
+        
+        // Carrinho de compras
+        let cart = [];
+        
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.getAttribute('data-item');
+                const price = parseFloat(btn.getAttribute('data-price'));
+                
+                // Verifica se o item já está no carrinho
+                const existingItem = cart.find(i => i.name === item);
+                
+                if(existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        name: item,
+                        price: price,
+                        quantity: 1
+                    });
+                }
+                
+                updateCart();
+                showCartNotification();
+            });
+        });
+        
+        function updateCart() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartSubtotal = document.getElementById('cart-subtotal');
+            
+            // Atualiza contador
+            cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+            
+            // Atualiza lista de itens
+            cartItems.innerHTML = '';
+            
+            if(cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-gray-500 text-center py-4">Seu carrinho está vazio</p>';
+            } else {
+                let subtotal = 0;
+                
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+                    
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'flex justify-between items-center py-2 border-b';
+                    itemElement.innerHTML = `
+                        <div>
+                            <h4 class="font-medium">${item.name}</h4>
+                            <p class="text-sm text-gray-500">R$ ${item.price.toFixed(2)} x ${item.quantity}</p>
+                        </div>
+                        <div class="font-bold">R$ ${itemTotal.toFixed(2)}</div>
+                    `;
+                    cartItems.appendChild(itemElement);
+                });
+                
+                cartSubtotal.textContent = 'R$ ' + subtotal.toFixed(2);
+            }
+        }
+        
+        function showCartNotification() {
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-6 left-6 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg animate-fade-in-out';
+            notification.textContent = 'Item adicionado ao carrinho!';
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+        
+        // Controle do modal do carrinho
+        document.getElementById('cart-btn').addEventListener('click', () => {
+            document.getElementById('cart-modal').classList.remove('hidden');
+        });
+        
+        document.getElementById('close-cart').addEventListener('click', () => {
+            document.getElementById('cart-modal').classList.add('hidden');
+        });
+        
+        document.getElementById('cart-modal').addEventListener('click', (e) => {
+            if(e.target === document.getElementById('cart-modal')) {
+                document.getElementById('cart-modal').classList.add('hidden');
+            }
+        });
+        
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            alert('Pedido finalizado! Obrigado por escolher a Doçuras da Vovó.');
+            cart = [];
+            updateCart();
+            document.getElementById('cart-modal').classList.add('hidden');
+        });
+        
+        // Mostrar categoria inicial
+        document.querySelector('[data-category="bolos"]').click();
+    </script>
+</body>
+</html>
+
